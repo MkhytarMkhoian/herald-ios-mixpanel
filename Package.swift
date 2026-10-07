@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "HeraldMixpanel", targets: ["HeraldMixpanel"])
     ],
     dependencies: [
-        .package(path: "../herald-ios"),
+        .package(url: "https://github.com/MkhytarMkhoian/herald-ios", from: "1.0.0-beta.1"),
         .package(url: "https://github.com/mixpanel/mixpanel-swift", from: "6.0.0"),
     ],
     targets: [
