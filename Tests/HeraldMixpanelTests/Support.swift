@@ -38,11 +38,11 @@ final class RecordingMixpanelSDK: MixpanelSDK, @unchecked Sendable {
     }
 
     func track(event: String, properties: Properties) {
-        record("track \(event)\(describe(properties))")
+        record("track \(event)\(formattedValues(properties))")
     }
 
     func registerSuperProperties(_ properties: Properties) {
-        record("registerSuperProperties\(describe(properties))")
+        record("registerSuperProperties\(formattedValues(properties))")
     }
 
     func setPeopleProperty(_ property: String, to value: MixpanelType) {
@@ -59,7 +59,7 @@ final class RecordingMixpanelSDK: MixpanelSDK, @unchecked Sendable {
 
     func optOutTracking() { record("optOutTracking") }
 
-    private func describe(_ properties: Properties) -> String {
+    private func formattedValues(_ properties: Properties) -> String {
         var text = ""
         for key in properties.keys.sorted() {
             let value = properties[key]!
