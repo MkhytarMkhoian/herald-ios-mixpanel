@@ -1,5 +1,8 @@
 # Herald for Mixpanel
 
+[![Swift versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FMkhytarMkhoian%2Fherald-ios-mixpanel%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/MkhytarMkhoian/herald-ios-mixpanel)
+[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FMkhytarMkhoian%2Fherald-ios-mixpanel%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/MkhytarMkhoian/herald-ios-mixpanel)
+
 Sends [Herald](https://github.com/MkhytarMkhoian/herald-ios) events and properties to Mixpanel,
 over [`mixpanel-swift`](https://github.com/mixpanel/mixpanel-swift).
 
