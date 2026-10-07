@@ -20,7 +20,7 @@ public struct ScreenViewMixpanelEventTracker: MixpanelEventTracker {
     }
 
     public func track() throws {
-        var properties = mixpanelProperties(event.parameters)
+        var properties = event.parameters.toMixpanelProperties()
         if properties["screen_name"] != nil {
             throw MixpanelRefusal(
                 description: "Screen view '\(event.name)' can't have a 'screen_name' parameter: "

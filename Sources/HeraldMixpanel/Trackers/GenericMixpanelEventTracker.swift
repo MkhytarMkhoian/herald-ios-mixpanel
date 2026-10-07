@@ -15,6 +15,6 @@ public struct GenericMixpanelEventTracker: MixpanelEventTracker {
     }
 
     public func track() {
-        sdk.track(event: event.name, properties: mixpanelProperties(event.parameters))
+        sdk.track(event: event.name, properties: event.parameters.toMixpanelProperties())
     }
 }

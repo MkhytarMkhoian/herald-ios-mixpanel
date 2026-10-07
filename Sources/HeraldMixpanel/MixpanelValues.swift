@@ -15,12 +15,16 @@ func mixpanelValue(_ value: AnalyticsValue) -> MixpanelType {
     }
 }
 
-func mixpanelProperties(_ parameters: [String: AnalyticsValue]) -> Properties {
-    var properties: Properties = [:]
-    for (key, value) in parameters {
-        properties[key] = mixpanelValue(value)
+extension [String: AnalyticsValue] {
+    /// The parameters as Mixpanel takes them, each value as its own type. For a tracker of your own:
+    /// `mixpanel.track(event: "refund", properties: ...)`.
+    public func toMixpanelProperties() -> Properties {
+        var properties: Properties = [:]
+        for (key, value) in self {
+            properties[key] = mixpanelValue(value)
+        }
+        return properties
     }
-    return properties
 }
 
 /// Why this module refused an event: it says what to change.

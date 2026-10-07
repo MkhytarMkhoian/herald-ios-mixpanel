@@ -1,8 +1,4 @@
 # Change Log
 
-## Version 1.0.0
-
-_Unreleased_
-
- * New: `HeraldMixpanel` sends events, super properties and People properties to Mixpanel, using
-   `mixpanel-swift` 6.
+All Herald for iOS packages share one version, and one change log covers them all: see
+[herald-ios's change log](https://github.com/MkhytarMkhoian/herald-ios/blob/main/CHANGELOG.md).
